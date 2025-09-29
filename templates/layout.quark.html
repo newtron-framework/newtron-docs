@@ -22,6 +22,20 @@
   </aside>
 
   <main>
-    {% outlet %}
+    <div class="content">
+      {{ content | raw }}
+    </div>
+    <div class="toc">
+      <h2>On this page</h2>
+      {% foreach $toc as $link %}
+      <a href="#{{ link.id }}">
+        {{ link.text }}
+      </a>
+      {% endforeach %}
+    </div>
   </main>
 </div>
+
+<footer>
+  <p>&copy; Newtron • Built with Newtron</p>
+</footer>

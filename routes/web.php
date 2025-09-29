@@ -21,9 +21,12 @@ Route::get('*', function (Request $request) {
 
   $md = new MarkdownDocument($mdFile);
 
-  App::getDocument()->setTitle($md->title ?? 'Newtron Docs');
+  App::getDocument()->setTitle($md->title . ' | Newtron Docs' ?? 'Newtron Docs');
 
   return Response::create(
-    Quark::render('article', ['content' => $md->content])
+    Quark::render('layout', [
+      'content' => $md->content,
+      'toc' => $md->toc,
+    ])
   );
 });
