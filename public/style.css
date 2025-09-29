@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-neutral-100: #f8f8f2;
+  --clr-neutral-900: #15171b;
+
+  --gradient: linear-gradient(135deg,#183d4f, #15171b);
+}
+
+body {
+  min-height: 100vh;
+  background: var(--clr-neutral-900);
+  color: var(--clr-neutral-100);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+header {
+  border-bottom: 1px solid gray;
+  background-color: var(--clr-neutral-900);
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+}
+
+.logo img {
+  display: block;
+  height: 64px;
+}
+
+.tagline {
+  margin-bottom: 1rem;
+  color: #f8f8f2;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  max-width: 500px;
+  margin: 0 auto 2rem;
+  color: #b6b9c9;
+  font-size: 1.125rem;
+}
+
+.card {
+  width: fit-content;
+  padding: 2rem;
+  margin: 2rem auto 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  background: #f8f8f2;
+  text-align: center;
+}
+
+.card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.card p {
+  margin-bottom: 1.5rem;
+  color: #414558;
+  font-size: 1.125rem;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.button {
+  flex: 1 1 0;
+  display: inline-block;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background-image: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: #15171b;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 300ms ease;
+  will-change: transform;
+}
+
+.button:where(:hover, :focus-visible) {
+  box-shadow: 0 8px 25px rgba(0, 126, 234, 102);
+  transform: translateY(-2px);
+}
+
+code {
+  padding: 2px 4px;
+  border-radius: 4px;
+  background-color: #21222c;
+  color: #b6b9c9;
+  font-size: 0.8em;
+  font-weight: 600;
+}
+
+footer {
+  padding-top: 2rem;
+  margin-top: 4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #b6b9c9;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .tagline {
+    font-size: 1.2rem;
+  }
+}

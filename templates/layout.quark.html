@@ -1,0 +1,27 @@
+<header>
+  <div class="container">
+    <nav aria-label="primary navigation">
+      <a href="https://newtron.app" class="logo">
+        <img src="https://raw.githubusercontent.com/newtron-framework/assets/master/newtron-logo.png" alt="newtron" />
+      </a>
+
+      <div class="links">
+        <a href="https://docs.newtron.app">Docs</a>
+        <a href="https://newtron.app/roadmap">Roadmap</a>
+        <a href="https://github.com/newtron-framework/newtron" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="content-wrapper container">
+  <aside>
+    {% include sidebar %}
+  </aside>
+
+  <main>
+    {% outlet %}
+  </main>
+</div>

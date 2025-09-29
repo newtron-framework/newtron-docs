@@ -1,0 +1,25 @@
+{
+  "name": "newtron/app",
+  "version": "0.1.0",
+  "type": "project",
+  "description": "PHP framework designed around the principle of complex features with embarrassingly simple code",
+  "homepage": "https://newtron.app",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "itsnewtjam",
+      "email": "newtron@newtjam.com",
+      "homepage": "https://newtjam.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Newtron\\App\\": "app/"
+    }
+  },
+  "require": {
+    "php": ">=8.3.0",
+    "newtron/core": "^0.1",
+    "erusev/parsedown": "^1.7"
+  }
+}

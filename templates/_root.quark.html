@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {{ document.renderHead() | raw }}
+  </head>
+  <body>
+    {% outlet %}
+
+    {{ document.renderBodyScripts() | raw }}
+  </body>
+</html>
