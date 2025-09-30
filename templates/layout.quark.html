@@ -2,7 +2,8 @@
   <div class="container">
     <nav aria-label="primary navigation">
       <a href="https://newtron.app" class="logo">
-        <img src="https://raw.githubusercontent.com/newtron-framework/assets/master/newtron-logo.png" alt="newtron" />
+        <img class="lg" src="https://raw.githubusercontent.com/newtron-framework/assets/master/newtron-logo.png" alt="newtron" />
+        <img class="sm" src="https://raw.githubusercontent.com/newtron-framework/assets/master/newtron-mark.png" alt="newtron" />
       </a>
 
       <div class="links">
@@ -11,6 +12,11 @@
         <a href="https://github.com/newtron-framework/newtron" target="_blank">
           <i class="fab fa-github"></i>
         </a>
+        <label class="mobile-menu" for="mobile-menu">
+          <input type="checkbox" id="mobile-menu" onchange="this.toggleAttribute('data-open');document.querySelector('.sidebar').toggleAttribute('data-open')" />
+          <i class="fa fa-bars"></i>
+          <i class="fa fa-close"></i>
+        </label>
       </div>
     </nav>
   </div>

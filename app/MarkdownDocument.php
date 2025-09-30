@@ -8,7 +8,7 @@ use Parsedown;
 class MarkdownDocument extends Parsedown {
   public string $title;
   public string $content;
-  public array $toc;
+  public array $toc = [];
 
   public function __construct(string $file) {
     $this->content = $this->text(file_get_contents($file));
