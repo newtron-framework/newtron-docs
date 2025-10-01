@@ -87,3 +87,12 @@ Quark::render('page', [
 <p>{{ item }}</p>
 {~ endforeach ~}
 ```
+
+## Global Variables
+
+Quark provides some global variables by default:
+
+| Variable | Description |
+| --- | --- |
+| `document` | A reference to the [Document](/document/document-management) instance |
+| `request` | The [Request](/http/handling-requests) object for the current request |

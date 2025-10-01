@@ -17,6 +17,10 @@ return [
         'label' => 'Configuration',
         'url' => '/getting-started/configuration'
       ],
+      [
+        'label' => 'Launcher',
+        'url' => '/getting-started/launcher'
+      ],
     ]
   ],
   [
@@ -34,6 +38,10 @@ return [
       [
         'label' => 'Declarative Routing',
         'url' => '/routing/declarative'
+      ],
+      [
+        'label' => 'Error Pages',
+        'url' => '/routing/error-pages'
       ],
     ]
   ],
@@ -56,6 +64,10 @@ return [
       [
         'label' => 'Directives',
         'url' => '/quark/directives'
+      ],
+      [
+        'label' => 'Extending',
+        'url' => '/quark/extending'
       ],
     ]
   ],
