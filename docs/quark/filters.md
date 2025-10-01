@@ -6,13 +6,13 @@ Quark provides some filter functions you can use when outputting expressions.
 
 To pass a value through a filter, you use the pipe character `|`:
 
-```twig
+```quark
 {{ name | upper }}
 ```
 
 You can chain as many filters together as you like:
 
-```twig
+```quark
 {{ name | upper | reverse }}
 ```
 
@@ -20,7 +20,7 @@ You can chain as many filters together as you like:
 
 Convert a string to uppercase:
 
-```twig
+```quark
 <!-- $test = 'test'; -->
 {{ test | upper }}
 <!-- Outputs: 'TEST' -->
@@ -30,7 +30,7 @@ Convert a string to uppercase:
 
 Convert a string to lowercase:
 
-```twig
+```quark
 <!-- $test = 'TEST'; -->
 {{ test | lower }}
 <!-- Outputs: 'test' -->
@@ -40,7 +40,7 @@ Convert a string to lowercase:
 
 Capitalize a string:
 
-```twig
+```quark
 <!-- $test = 'test'; -->
 {{ test | capitalize }}
 <!-- Outputs: 'Test' -->
@@ -50,7 +50,7 @@ Capitalize a string:
 
 Get the length of a string:
 
-```twig
+```quark
 <!-- $test = 'test'; -->
 {{ test | length }}
 <!-- Outputs: 4 -->
@@ -58,7 +58,7 @@ Get the length of a string:
 
 Or an array:
 
-```twig
+```quark
 <!-- $test = [1, 2, 3]; -->
 {{ test | length }}
 <!-- Outputs: 3 -->
@@ -68,7 +68,7 @@ Or an array:
 
 Reverse a string:
 
-```twig
+```quark
 <!-- $test = 'test'; -->
 {{ test | reverse }}
 <!-- Outputs: 'tset' -->
@@ -76,7 +76,7 @@ Reverse a string:
 
 Or an array:
 
-```twig
+```quark
 <!-- $test = [1, 2, 3]; -->
 {{ test | reverse }}
 <!-- Outputs: [3, 2, 1] -->
@@ -86,7 +86,7 @@ Or an array:
 
 Sort an array:
 
-```twig
+```quark
 <!-- $test = [2, 3, 1]; -->
 {{ test | sort }}
 <!-- Outputs: [1, 2, 3] -->
@@ -96,7 +96,7 @@ Sort an array:
 
 Combine an array:
 
-```twig
+```quark
 <!-- $test = [1, 2, 3]; -->
 {{ test | join }}
 <!-- Outputs: '1, 2, 3' -->
@@ -104,7 +104,7 @@ Combine an array:
 
 With a custom separator:
 
-```twig
+```quark
 <!-- $test = [1, 2, 3]; -->
 {{ test | join('.') }}
 <!-- Outputs: '1.2.3' -->
@@ -114,7 +114,7 @@ With a custom separator:
 
 Provide a default value if the value is empty:
 
-```twig
+```quark
 <!-- $test = ''; -->
 {{ test | default('Default') }}
 <!-- Outputs: 'Default' -->
@@ -128,7 +128,7 @@ Provide a default value if the value is empty:
 
 Format a date:
 
-```twig
+```quark
 <!-- $test = '12/20/2000'; -->
 {{ test | date }}
 <!-- Outputs: '2000-12-20' -->
@@ -136,7 +136,7 @@ Format a date:
 
 With a custom format:
 
-```twig
+```quark
 <!-- $test = '12/20/2000'; -->
 {{ test | date('M d, Y') }}
 <!-- Outputs: 'Dec 20, 2000' -->
@@ -146,7 +146,7 @@ With a custom format:
 
 Truncate a string (default length is 100):
 
-```twig
+```quark
 <!-- $test = '12345678'; -->
 {{ test | truncate(4) }}
 <!-- Outputs: '1234...' -->
@@ -156,7 +156,7 @@ Truncate a string (default length is 100):
 
 Output a value without escaping it:
 
-```twig
+```quark
 <!-- $test = '<script>alert(1)</script>'; -->
 {{ test | raw }}
 <!-- Outputs: '<script>alert(1)</script>' -->
@@ -166,7 +166,7 @@ Output a value without escaping it:
 
 Output a value as JSON:
 
-```twig
+```quark
 <!-- $test = ['key' => 'value']; -->
 {{ test | json }}
 <!-- Outputs: '{"key":"value"}' -->
@@ -176,7 +176,7 @@ Output a value as JSON:
 
 Dump a variable for easy debugging:
 
-```twig
+```quark
 <!-- $test = ['key' => 'value']; -->
 {{ test | dump }}
 <!-- Outputs: '<pre>Array ( [test] => value )</pre>' -->

@@ -6,8 +6,8 @@ For more complex template logic, Quark provides directives you can use to contro
 
 Set a parent layout for the template:
 
-```twig
-{% layout 'layouts.app' %}
+```quark
+{~ layout 'layouts.app' ~}
 ```
 
 ## skip_root
@@ -15,66 +15,66 @@ Set a parent layout for the template:
 Skip the Root Layout when rendering the template:
 
 ```
-{% skip_root %}
+{~ skip_root ~}
 ```
 
 ## outlet
 
 Render the content of a child template:
 
-```twig
-{% outlet %}
+```quark
+{~ outlet ~}
 ```
 
 Or render the [content of a named slot](/quark/layouts-inheritance#named-outlets) in a child template:
 
-```twig
-{% outlet custom %}
+```quark
+{~ outlet custom ~}
 ```
 
 ## slot, endslot
 
 Define content for a [slot](/quark/layouts-inheritance#slots):
 
-```twig
-{% slot custom %}
+```quark
+{~ slot custom ~}
 <p>Slot content</p>
-{% endslot %}
+{~ endslot ~}
 ```
 
 ## include
 
 Include another template within the current template:
 
-```twig
-{% include 'nested.item' %}
+```quark
+{~ include 'nested.item' ~}
 ```
 
 ## if, else, elseif, endif
 
-```twig
-{% if $role === 'admin' %}
+```quark
+{~ if $role === 'admin' ~}
 <p>Hello, admin!</p>
-{% elseif $role === 'member' %}
+{~ elseif $role === 'member' ~}
 <p>Hello, member!</p>
-{% else %}
+{~ else ~}
 <p>Hello, guest!</p>
-{% endif %}
+{~ endif ~}
 ```
 
 ## foreach, endforeach
 
-```twig
-{% foreach $items as $item %}
+```quark
+{~ foreach $items as $item ~}
 <p>{{ item.name }}</p>
-{% endforeach %}
+{~ endforeach ~}
 ```
 
 ## set
 
 Set a variable value:
 
-```twig
-{% set $name = 'Newtron' %}
+```quark
+{~ set $name = 'Newtron' ~}
 <p>{{ name }}</p>
 ```

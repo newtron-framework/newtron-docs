@@ -24,7 +24,7 @@
 
 <div class="content-wrapper container">
   <aside>
-    {% include sidebar %}
+    {~ include sidebar ~}
   </aside>
 
   <main>
@@ -33,11 +33,11 @@
     </div>
     <div class="toc">
       <h2>On this page</h2>
-      {% foreach $toc as $link %}
+      {~ foreach $toc as $link ~}
       <a href="#{{ link.id }}">
         {{ link.text }}
       </a>
-      {% endforeach %}
+      {~ endforeach ~}
     </div>
   </main>
 </div>

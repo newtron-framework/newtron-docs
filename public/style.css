@@ -420,6 +420,7 @@ code:not([class]) {
   background-color: var(--clr-neutral-650);
   color: var(--clr-neutral-300);
   font-weight: 600;
+  white-space: pre-wrap;
 }
 
 blockquote code:not([class]) {

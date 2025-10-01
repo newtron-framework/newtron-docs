@@ -1,25 +1,25 @@
-{% set $active = $request->getPath() %}
+{~ set $active = $request->getPath() ~}
 <li>
   <details
-    {% if str_starts_with($active, $section['slug']) %}
+    {~ if str_starts_with($active, $section['slug']) ~}
     open
-    {% endif %}
+    {~ endif ~}
   >
     <summary>
       <span>{{ section.label }}</span>
       <i class="fa fa-angle-right"></i>
     </summary>
     <div>
-      {% foreach $section['links'] as $link %}
+      {~ foreach $section['links'] as $link ~}
       <a 
         href="{{ link.url }}"
-        {% if $active === $link['url'] %}
+        {~ if $active === $link['url'] ~}
         class="active"
-        {% endif %}
+        {~ endif ~}
       >
         {{ link.label }}
       </a>
-      {% endforeach %}
+      {~ endforeach ~}
     </div>
   </details>
 </li>

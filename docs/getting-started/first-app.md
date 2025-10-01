@@ -85,8 +85,8 @@ Let's run through everything this route file is doing:
 
 Our route doesn't do us any good without a template, so let's create one! Create the template at `templates/home.quark.html`:
 
-```twig
-{% layout 'layouts.app' %}
+```quark
+{~ layout 'layouts.app' ~}
 
 <div class="hero">
   <h1>Hi, I'm {{ name }}</h1>
@@ -108,7 +108,7 @@ For the most part, the template is standard HTML. But there are a few Quark thin
 
 In our template, we defined a parent layout so let's create the file for that layout template! In our case, we set the layout to `layouts.app`, which will translate to the file `templates/layouts/app.quark.html`:
 
-```twig
+```quark
 <nav>
   <ul>
     <li><a href="/">Home</a></li>
@@ -118,11 +118,11 @@ In our template, we defined a parent layout so let's create the file for that la
 </nav>
 
 <div class="container">
-  {% outlet %}
+  {~ outlet ~}
 </div>
 ```
 
-This template is pretty simple. We just define a navbar, and use `{% outlet %}` to render the child template's content. Layouts like this are handy, because we can define our site's layout once and use it to wrap every page's content without having to repeat code.
+This template is pretty simple. We just define a navbar, and use `{~ outlet ~}` to render the child template's content. Layouts like this are handy, because we can define our site's layout once and use it to wrap every page's content without having to repeat code.
 
 We now have all of the pieces in place, so visit `http://localhost:8000` and you should see your homepage!
 
@@ -184,8 +184,8 @@ This time we're returning some data from our Preflight Function! Usually you mig
 
 And of course we'll need to create a template at `templates/about.quark.html`:
 
-```twig
-{% layout 'layouts.app' %}
+```quark
+{~ layout 'layouts.app' ~}
 
 <h1>About Me</h1>
 
@@ -197,16 +197,16 @@ And of course we'll need to create a template at `templates/about.quark.html`:
 
   <h2 style="margin-top: 3rem; color: #667eea;">Skills</h2>
   <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
-    {% foreach $skills as $skill %}
+    {~ foreach $skills as $skill ~}
     <span style="background: #667eea; color: white; padding: 0.5rem 1rem; border-radius: 20px;">
       {{ skill }}
     </span>
-    {% endforeach %}
+    {~ endforeach ~}
   </div>
 
   <h2 style="margin-top: 3rem; color: #667eea;">Experience</h2>
   <div style="margin-top: 2rem;">
-    {% foreach $experience as $job %}
+    {~ foreach $experience as $job ~}
     <div style="margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #eee;">
       <h3>{{ job.role }}</h3>
       <p style="color: #667eea; font-weight: 600;">
@@ -216,7 +216,7 @@ And of course we'll need to create a template at `templates/about.quark.html`:
         {{ job.description }}
       </p>
     </div>
-    {% endforeach %}
+    {~ endforeach ~}
   </div>
 </div>
 ```
@@ -283,8 +283,8 @@ return [
 
 And the cooresponding template at `templates/projects/showcase.quark.html`:
 
-```twig
-{% layout 'layouts.app' %}
+```quark
+{~ layout 'layouts.app' ~}
 
 <h1>My Projects</h1>
 <p style="font-size: 1.2rem; color: #666; margin-bottom: 2rem;">
@@ -292,22 +292,22 @@ And the cooresponding template at `templates/projects/showcase.quark.html`:
 </p>
 
 <div class="project-grid">
-  {% foreach $projects as $project %}
+  {~ foreach $projects as $project ~}
   <div class="project-card">
     <h3>{{ project.title }}</h3>
     <p>{{ project.description }}</p>
     
     <div style="margin: 1rem 0;">
-      {% foreach $project['tech'] as $tech %}
+      {~ foreach $project['tech'] as $tech ~}
       <span style="display: inline-block; background: #f0f0f0; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.85rem; margin-right: 0.5rem;">
         {{ tech }}
       </span>
-      {% endforeach %}
+      {~ endforeach ~}
     </div>
     
     <a href="/projects/{{ project.id }}">View Details →</a>
   </div>
-  {% endforeach %}
+  {~ endforeach ~}
 </div>
 ```
 
@@ -399,8 +399,8 @@ This time we're taking an argument in our Preflight `get()` function: `$id`. Thi
 
 Again we'll create a simple template for our page at `templates/projects/details.quark.html`:
 
-```twig
-{% layout 'layouts.app' %}
+```quark
+{~ layout 'layouts.app' ~}
 
 <a href="/projects" style="color: #667eea; text-decoration: none; display: inline-block; margin-bottom: 2rem;">
   ← Back to projects
@@ -409,12 +409,12 @@ Again we'll create a simple template for our page at `templates/projects/details
 <h1>{{ project.title }}</h1>
 
 <div style="margin: 1rem 0;">
-  {% foreach $project['tech'] as $tech %}
+  {~ foreach $project['tech'] as $tech ~}
   <span
     style="display: inline-block; background: #667eea; color: white; padding: 0.5rem 1rem; border-radius: 20px; margin-right: 0.5rem;">
     {{ tech }}
   </span>
-  {% endforeach %}
+  {~ endforeach ~}
 </div>
 
 <div style="max-width: 800px; margin-top: 2rem;">
@@ -425,9 +425,9 @@ Again we'll create a simple template for our page at `templates/projects/details
 
   <h2 style="margin-top: 3rem; color: #667eea;">Key Features</h2>
   <ul style="margin-top: 1rem;">
-    {% foreach $project['features'] as $feature %}
+    {~ foreach $project['features'] as $feature ~}
     <li style="color: #666; margin-bottom: 0.5rem;">{{ feature }}</li>
-    {% endforeach %}
+    {~ endforeach ~}
   </ul>
 </div>
 ```

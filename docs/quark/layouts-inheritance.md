@@ -6,7 +6,7 @@ Quark uses a layout system that lets you create reusable page structures and use
 
 A layout is just a normal template that defines some page structure:
 
-```twig
+```quark
 <header>
   <nav>
     <a href="/">Home</a>
@@ -16,7 +16,7 @@ A layout is just a normal template that defines some page structure:
 </header>
 
 <main>
-  {% outlet %}
+  {~ outlet ~}
 </main>
 
 <footer>
@@ -24,14 +24,14 @@ A layout is just a normal template that defines some page structure:
 </footer>
 ```
 
-The one thing that's different in a layout template is the use of the `{% outlet %}` directive. This defines the place to render the contents of child templates that use this layout.
+The one thing that's different in a layout template is the use of the `{~ outlet ~}` directive. This defines the place to render the contents of child templates that use this layout.
 
 ## Using a Layout
 
-Use the `{% layout %}` directive to inherit a layout:
+Use the `{~ layout ~}` directive to inherit a layout:
 
-```twig
-{% layout 'layouts.app' %}
+```quark
+{~ layout 'layouts.app' ~}
 
 <h1>Welcome</h1>
 <p>This is the homepage content.</p>
@@ -43,28 +43,28 @@ The child template's content will fill the outlet in the layout.
 
 ## Slots
 
-Sometimes you may want to insert content into multiple places within a layout. For this, you can wrap content with `{% slot %}` and `{% endslot %}`:
+Sometimes you may want to insert content into multiple places within a layout. For this, you can wrap content with `{~ slot ~}` and `{~ endslot ~}`:
 
-```twig
-{% slot sidebar %}
+```quark
+{~ slot sidebar ~}
 <h2>Sidebar</h2>
 <p>This is sidebar content</p>
-{% endslot %}
+{~ endslot ~}
 ```
 
 Here we define content for a slot named `sidebar`, which will allow us to reference it with a named outlet.
 
 ## Named Outlets
 
-By default the `{% outlet %}` directive just catches the output of the child template. When used with a name, it will use the content of the slot with the same name:
+By default the `{~ outlet ~}` directive just catches the output of the child template. When used with a name, it will use the content of the slot with the same name:
 
-```twig
+```quark
 <div>
-{% outlet sidebar %}
+{~ outlet sidebar ~}
 </div>
 ```
 
-This would render content marked by `{% slot sidebar %}` in the child template.
+This would render content marked by `{~ slot sidebar ~}` in the child template.
 
 ## The Root Layout
 
@@ -72,14 +72,14 @@ Quark recognizes one special layout at `templates/_root.quark.html`. This is the
 
 The root is a great place for things like your HTML boilerplate that get used on every page. For example, here's Newtron's default root:
 
-```twig
+```quark
 <!DOCTYPE html>
 <html>
   <head>
     {{ document->renderHead() | raw }}
   </head>
   <body>
-    {% outlet %}
+    {~ outlet ~}
 
     {{ document->renderBodyScripts() | raw }}
   </body>
