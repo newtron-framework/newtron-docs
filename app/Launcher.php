@@ -10,6 +10,8 @@ class Launcher {
   // Use this method to run any custom initialization
   public static function setup(): void {
     $am = App::getAssetManager();
+    $am->registerStylesheet('fonts', '/fonts.css');
+    $am->useStylesheet('fonts');
     $am->registerStylesheet('global', '/style.css');
     $am->useStylesheet('global');
     $am->registerStylesheet('font-awesome', 'https://kit.fontawesome.com/2f00f14f95.css');
