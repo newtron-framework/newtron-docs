@@ -43,7 +43,7 @@ body {
 
 @media (min-width: 40em) {
   .container {
-    padding: 0 2rem;
+    padding: 0 4rem;
   }
 }
 
