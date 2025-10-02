@@ -1,3 +1,7 @@
+---
+description: "Create routes by adding files. Dynamic routes with variable params. No configuration needed."
+---
+
 # File-Based Routing
 
 The file-based routing mode is Newtron's convention-over-configuration approach to routing. Create a file, get a route.

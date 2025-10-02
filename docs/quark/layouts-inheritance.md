@@ -1,3 +1,7 @@
+---
+description: "Create reusable layouts with Quark. Template inheritance, slots, and nested layouts for consistent page structure."
+---
+
 # Layouts and Inheritance
 
 Quark uses a layout system that lets you create reusable page structures and use them in child templates, helping to eliminate repetitive HTML.

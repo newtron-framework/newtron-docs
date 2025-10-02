@@ -1,3 +1,7 @@
+---
+description: "Use Newtron's Launcher to configure your app during initialization. Register assets, middleware, and services."
+---
+
 # Launcher
 
 When using the `newtron/skeleton` starter, Newtron includes a Launcher file at `app/Launcher.php`. This is your application's entry point for setup and the perfect place to register services, configure assets, and prepare your application before it handles requests.

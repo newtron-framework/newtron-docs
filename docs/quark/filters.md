@@ -1,3 +1,7 @@
+---
+description: "Transform data in Quark templates with filters. Format dates, strings, numbers, and more with clean, chainable syntax."
+---
+
 # Filters
 
 Quark provides some filter functions you can use when outputting expressions.

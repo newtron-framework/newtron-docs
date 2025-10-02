@@ -1,3 +1,7 @@
+---
+description: "Set page titles, meta tags, and Open Graph properties with Newtron's Document interface. SEO and social sharing made easy."
+---
+
 # Document Management
 
 Newtron's Document interface gives you clean, straightforward control over page metadata and assets. Set titles, manage meta tags, and add CSS/JavaScript with a simple API.

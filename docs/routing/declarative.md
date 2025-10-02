@@ -1,3 +1,7 @@
+---
+description: "Define routes explicitly with the router. RESTful resources, route groups, middleware, and parameters."
+---
+
 # Declarative Routing
 
 Declarative routing gives you explicit control over how URLs map to your application code. Define routes in PHP files in the `routes/` directory with full control.

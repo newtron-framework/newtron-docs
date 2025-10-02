@@ -1,3 +1,7 @@
+---
+description: "Install Newtron with Composer and create your first project. Supports PHP 8.3+ on any hosting platform."
+---
+
 # Installation
 
 Get up and running in just a few minutes.

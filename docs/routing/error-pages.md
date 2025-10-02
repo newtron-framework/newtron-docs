@@ -1,3 +1,7 @@
+---
+description: "Customize error pages for any status code in Newtron. Replace generic browser errors with branded pages that help users."
+---
+
 # Error Pages
 
 When something goes wrong, show your users a helpful, branded error page instead of a generic browser error. Newtron makes it easy to customize error pages for different HTTP status codes.

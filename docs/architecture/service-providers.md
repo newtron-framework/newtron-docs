@@ -1,3 +1,7 @@
+---
+description: "Organize your app with service providers. Register services, configure features, and structure large applications."
+---
+
 # Service Providers
 
 Service providers are the central place to configure your application. They tell Newtron how to create services and boot components. Think of them as the organizational backbone of your application.

@@ -1,3 +1,7 @@
+---
+description: "Filter HTTP requests with middleware. Authentication, CORS, logging, and custom filters. Apply globally or per-route."
+---
+
 # Middleware
 
 Middleware provides a way to filter or modify HTTP requests before they reach your route handlers. Use middleware for authentication, logging, CORS, rate limiting, and any cross-cutting concerns.

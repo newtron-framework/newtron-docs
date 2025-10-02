@@ -1,3 +1,7 @@
+---
+description: "Build your first Newtron app: a portfolio site with routing, templates, and dynamic pages. Complete tutorial with code."
+---
+
 # Your First Application
 
 Let's build a simple multi-page site to get familiar with Newtron's core concepts. We'll create a personal portfolio site that demonstrates routing, templates, and working with static content.

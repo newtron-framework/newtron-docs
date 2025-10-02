@@ -20,6 +20,7 @@
   "require": {
     "php": ">=8.3.0",
     "newtron/core": "^0.1",
-    "erusev/parsedown": "^1.7"
+    "erusev/parsedown": "^1.7",
+    "symfony/yaml": "^7.3"
   }
 }

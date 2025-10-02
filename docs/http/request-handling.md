@@ -1,3 +1,7 @@
+---
+description: "Access request data in Newtron: input, files, headers, cookies. Complete guide to working with HTTP requests."
+---
+
 # Request Handling
 
 Newtron's Request object provides a clean interface for working with incoming HTTP requests. Easily access query parameters, form data, uploaded files, headers, and any request info.

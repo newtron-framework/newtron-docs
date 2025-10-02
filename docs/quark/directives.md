@@ -1,3 +1,7 @@
+---
+description: "Master Quark's template directives: conditionals, loops, slots, and layouts. Complete syntax guide with examples."
+---
+
 # Directives
 
 For more complex template logic, Quark provides directives you can use to control your templates.

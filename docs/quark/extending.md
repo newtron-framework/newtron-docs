@@ -1,3 +1,7 @@
+---
+description: "Extend Quark with custom filters and directives. Add your own template features to match your application's needs."
+---
+
 # Extending Quark
 
 Quark is designed to be easily extended for any custom functionality you may need.

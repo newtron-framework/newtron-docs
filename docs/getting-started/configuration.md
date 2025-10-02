@@ -1,3 +1,7 @@
+---
+description: "Configure Newtron with .env files and PHP config. Environment variables, settings, and production setup guide."
+---
+
 # Configuration
 
 Newtron uses a simple configuration system combining PHP config files and environment files.

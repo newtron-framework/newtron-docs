@@ -1,3 +1,7 @@
+---
+description: "Choose your routing style in Newtron: file-based for simplicity or declarative for control. Both are fully supported."
+---
+
 # Introduction to Routing in Newtron
 
 Routing is how Newtron maps URLs to the code that handles them. Newtron supports two distinct routing modes: **File-based** routing and **Declarative** routing.

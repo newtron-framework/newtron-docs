@@ -1,3 +1,7 @@
+---
+description: "Return HTML, JSON, and redirects in Newtron. Status codes, headers, cookies, and response types explained."
+---
+
 # Generating Responses
 
 Every route handler in Newtron will return a response. Whether it's HTML, JSON, a redirect, or anything else Newtron provides a consistent API for generating all types of HTTP responses.

@@ -1,3 +1,7 @@
+---
+description: "Understand how Newtron processes requests. From initialization to response, see every stage of the application lifecycle."
+---
+
 # Application Lifecycle
 
 Understanding how Newtron processes requests helps you know where and when your code runs. This guide walks through the complete lifecycle of a request, from the moment it arrives to when the response is sent.

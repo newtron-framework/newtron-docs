@@ -1,3 +1,7 @@
+---
+description: "Manage CSS and JavaScript with Newtron's Asset Manager. Register once, use anywhere. Global and page-specific assets."
+---
+
 # Asset Management
 
 Newtron's Asset Manager provides a clean way to organize and manage CSS and JavaScript files. Register assets once, then easily include them on any page.

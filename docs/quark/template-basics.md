@@ -1,3 +1,7 @@
+---
+description: "Build views with Quark templates. Display data, control structures, and loops. Clean syntax with power."
+---
+
 # Quark Template Basics
 
 Quark is Newtron's built-in templating engine. It provides a simple syntax for building templates while remaining just PHP under the hood.
