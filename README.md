@@ -4,106 +4,154 @@
   </a>
 </p>
 
-A fresh Newtron application ready for you to build something amazing.
+The official documentation website for [Newtron](https://github.com/newtron-framework/newtron), built with Newtron.
 
 ## About Newtron
 
 Newtron is a PHP framework built around one core principle: complex features should require embarrassingly simple code.
 It's built to solve real developer pain points by making common, complex tasks trivially simple.
 
-## Current Status
+## What This Is
 
-Newtron is currently a work in progress. In it's current state, Newtron can support simple static sites.
+This repository contains the source files for Newtron's documentation website, including:
 
-### ✅ Phase 1 Complete: Core foundation
+- Getting Started guides
+- Core documentation
+- Tutorials and examples
+- Architecture explanations
 
-- Application container with dependency injection
-- Request/Response abstraction
-- Two routing modes (declarative or file-based)
-- Middleware pipeline
-- Quark, a custom templating engine
-- Error handling and logging
+## Local Development
 
-### 🚧 Up Next: Developer experience improvements and the signature forms system
+# Newtron Documentation
 
-## Requirements
+The official documentation website for [Newtron](https://github.com/newtron/core) - a PHP framework built around the principle of "complex features with embarrassingly simple code."
 
-- PHP 8.3 or higher
+**Live site:** [newtron.dev](https://newtron.dev) *(update with actual URL)*
+
+## What This Is
+
+This repository contains the source files for Newtron's documentation website, including:
+
+- Getting Started guides
+- Complete API documentation
+- Tutorials and examples
+- Architecture explanations
+- Contribution guidelines
+
+## Local Development
+
+### Prerequisites
+
+- PHP 8.3+
 - Composer
+- Git
 
-## Installation
-
-```bash
-composer create-project newtron/app my-app
-```
-
-## Quick Start
+### Setup
 
 ```bash
-// Start a development server
+# Clone the repository
+git clone https://github.com/newtron-framework/newtron-docs.git
+cd newtron-docs
+
+# Install dependencies
+composer install
+
+# Start development server
 cd public && php -S localhost:8000
 ```
 
+The site will be available at `http://localhost:8000`.
+
+## Documentation Structure
+
+The documentation is made up of Markdown files in the `docs/` directory, and the file paths within `docs/` are used for the URL. 
+
+The sidebar menu is defined in `app/SidebarStructure.php`.
+
+## Contributing
+
+Any contributions to improve the documentation are welcome! Here's how:
+
+### Fixing Typos or Small Errors
+
+1. Click "Edit this page" at the bottom of any documentation page
+2. Make your changes
+3. Submit a pull request
+
+### Adding New Content
+
+1. Fork this repository
+2. Create a new branch: `git checkout -b docs/my-improvement`
+3. Make your changes following our [style guide](#style-guide)
+4. Test locally
+5. Submit a pull request with a clear description
+
+### Reporting Issues
+
+Found a problem? [Open an issue](https://github.com/newtron-framework/newtron-docs/issues) with:
+
+- What's wrong or unclear
+- Which page it's on
+- Suggestions for improvement (if any)
+
+## Style Guide
+
+### Writing Style
+
+- **Be conversational:** Write like you're explaining to a friend
+- **Be practical:** Focus on real use cases, not abstract concepts
+- **Be concise:** Respect the reader's time
+- **Show and explain:** Use code examples liberally, but be sure to explain deeper concepts
+- **Be honest:** If something is coming later, say so
+
+### Code Examples
+
+- Include complete, working examples
+- Use realistic variable names and scenarios
+- Add comments for clarity, but don't over-comment
+- Show both simple and advanced usage when relevant
+
 ```php
-// Create your first page (file-based routing)
-// /routes/hello.php
-<?php
+// Good - complete and practical
+$form = Form::new()
+  ->field('email')->required()->email()
+  ->field('password')->required()->min(8);
 
-use Newtron\Core\Http\Response;
-use Newtron\Core\Routing\FileRoute;
-
-class Hello extends FileRoute {
-  public function get(): void {
-    return;
-  }
-
-  public function render(mixed $data): mixed {
-    return Response::create('Hello world!');
-  }
+if ($form->submitted() && $form->valid()) {
+  Auth::login($form->data());
 }
 
-// Or add a new route (declarative routing)
-// /routes/web.php
-<?php
-
-use Newtron\Core\Http\Response;
-use Newtron\Core\Routing\Route;
-
-Route::get('/hello', function () {
-  return Response::create('Hello world!');
-});
-
-
-// Visit http://localhost:8000/hello
+// Bad - too abstract
+$x = SomeClass::create($y);
+if ($x->check()) {
+  $x->process();
+}
 ```
 
-## Project Structure
+### Formatting
 
-```bash
-my-app/
-├── app/
-│   └── Launcher.php        # Helper for custom initialization
-├── config/
-│   ├── app.php             # Application configuration
-│   └── routing.php         # Routing settings
-├── public/
-│   ├── favicon.ico
-│   ├── index.php           # Application entry point
-│   └── styles.css
-├── routes/
-│   └── welcome.php         # Welcome file-based route
-└── templates/
-    └── welcome.quark.html  # Quark welcome template
-```
+- Use H1 (`#`) for page title only
+- Use H2 (`##`) for main sections
+- Use H3 (`###`) for subsections
+- Use code blocks with language specified: ` ```php `
+- Use inline code for: commands, file paths, class names, method names
+- Bold key, Newtron-specific concepts on first use
+- Use lists for steps or collections of items
 
-## Need Help?
+### Structure
 
-- Documentation: WIP
-- [Issues](https://github.com/newtron-framework/newtron/issues)
-- [Discussions](https://github.com/newtron-framework/newtron/discussions)
+Every documentation page should include:
 
-## Stay Updated
+1. **Brief introduction:** What this page covers
+2. **Core content:** Organized by topic/complexity
+3. **Code examples:** Practical, copy-paste ready
 
-Newtron is in active development. Watch the repository to get notified when new phases are released.
+Avoid:
+- "What's coming" sections (save for roadmap)
+- "Best practices" sections (integrate into content)
+- "Common patterns" dumps (show in context)
 
-The best is yet to come! 🚀
+## Getting Help
+
+- **General questions:** [GitHub Discussions](https://github.com/newtron-framework/newtron/discussions)
+- **Documentation issues:** [Open an issue](https://github.com/newtron-framework/newtron-docs/issues)

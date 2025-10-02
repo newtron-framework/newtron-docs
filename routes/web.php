@@ -27,6 +27,7 @@ Route::get('*', function (Request $request) {
     Quark::render('layout', [
       'content' => $md->content,
       'toc' => $md->toc,
+      'markdownPath' => ltrim($mdFile, NEWTRON_ROOT . '/docs/'),
     ])
   );
 });
